@@ -1,29 +1,31 @@
 import React, { useState } from "react";
-import HighScoreTable from './data/scores';
-import allCountryScores from "data/allCountryScores"
-function sortName = (index) => {
-index.sort((a,b)=>{
-      if (a.name < b.name){
+import Header from "./Header";
+const  HighScoreTable = (props) => {
+
+
+    const sortDec = props.scores.sort((a, b) => {
+        //return value positive
+        if (a.s < b.s) {
+          return +1;
+        } else if (a.s > b.s) {
           return -1;
-      }
-      return 1;
-});
+        } else {
+          return 0;
+        }
+      });
+
+return (
+  <div>
+    <Header country={props.name} />
+    <table>
+        {sortDec.map(score => <tr> 
+            <td>{score.n}</td>
+            <td>{score.s}</td>
+                 </tr>
+        )}   
+    </table>
+  </div>
+)
 }
-
- 
-function HighScoreTable =() => {
-    sortName(allCountryScores)
-    const [order, setOrder] = useState(allCountryScores);
-
-}
-
-
-
-
-
-
-
-
 
 export default HighScoreTable;
-
