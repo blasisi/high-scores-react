@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "./Header";
+
 const  HighScoreTable = (props) => {
 
 
@@ -17,7 +18,7 @@ const  HighScoreTable = (props) => {
 return (
   <div>
     <Header country={props.name} />
-    <table>
+    <table className="box">
         {sortDec.map(score => <tr> 
             <td>{score.n}</td>
             <td>{score.s}</td>

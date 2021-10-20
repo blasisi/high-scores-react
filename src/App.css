@@ -1,11 +1,36 @@
 .App {
-  text-align: center;
+  text-align:  center;
+  background-color: white;
+  direction: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+.tableBorder{
+border:  10px solid brown;
+margin: 1rem auto;
+width: 60%;
+}
+
+.table tr{
+border: 2px solid rgb(red, green, blue);
+
+}
+
+.table tr:nth-child(2){
+  color: rgb(117, 124, 117);
+  }
+
+.country{
+ text-align: center;
+
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
