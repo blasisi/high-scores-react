@@ -18,7 +18,8 @@ const  HighScoreTable = (props) => {
 return (
   <div>
     <Header country={props.name} />
-    <table className="box">
+    
+    <table style={{marginLeft: "auto" , marginRight: "auto" }} >
         {sortDec.map(score => <tr> 
             <td>{score.n}</td>
             <td>{score.s}</td>
